@@ -171,7 +171,6 @@ fuxi-agent-loop-skill/
 ├── TEST_PLAN.md          # 测试计划
 ├── PROMPTS.md            # 常用提示词模板
 ├── EXAMPLES.md           # 使用案例
-├── OPENAI_OSS_APPLICATION.md # 开源额度申请草稿
 ├── LICENSE               # MIT License
 └── .gitignore
 ```

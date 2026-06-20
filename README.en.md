@@ -144,7 +144,6 @@ fuxi-agent-loop-skill/
 ├── TEST_PLAN.md          # Test plan
 ├── PROMPTS.md            # Prompt recipes
 ├── EXAMPLES.md           # Usage examples
-├── OPENAI_OSS_APPLICATION.md # Open-source credits application draft
 ├── LICENSE               # MIT License
 └── .gitignore
 ```
