@@ -98,6 +98,10 @@ Use fuxi to make this vague creative workflow safe to run every day.
 Use fuxi to inspect this repository, define the next handoff, and stop before risky changes.
 ```
 
+## Examples
+
+Practical usage examples are available in EXAMPLES.md.
+
 ## Prompt recipes
 
 Common activation and test prompts are available in PROMPTS.md.
@@ -139,6 +143,8 @@ fuxi-agent-loop-skill/
 ├── SECURITY.md           # Security policy
 ├── TEST_PLAN.md          # Test plan
 ├── PROMPTS.md            # Prompt recipes
+├── EXAMPLES.md           # Usage examples
+├── OPENAI_OSS_APPLICATION.md # Open-source credits application draft
 ├── LICENSE               # MIT License
 └── .gitignore
 ```
