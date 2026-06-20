@@ -110,6 +110,10 @@ Use fuxi to inspect this repository, define the next handoff, and stop before ri
 用 fuxi 把这个混乱的工作流整理成可反复执行、可验证、可暂停的流程。
 ```
 
+## 提示词模板
+
+常用触发词和测试提示见 PROMPTS.md。
+
 ## 安装后验证
 
 让 agent 执行一个低风险测试:
@@ -161,6 +165,7 @@ fuxi-agent-loop-skill/
 ├── ACKNOWLEDGEMENTS.md   # 来源与致谢说明
 ├── SECURITY.md           # 安全说明
 ├── TEST_PLAN.md          # 测试计划
+├── PROMPTS.md            # 常用提示词模板
 ├── LICENSE               # MIT License
 └── .gitignore
 ```

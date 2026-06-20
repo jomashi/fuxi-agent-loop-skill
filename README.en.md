@@ -98,6 +98,10 @@ Use fuxi to make this vague creative workflow safe to run every day.
 Use fuxi to inspect this repository, define the next handoff, and stop before risky changes.
 ```
 
+## Prompt recipes
+
+Common activation and test prompts are available in PROMPTS.md.
+
 ## Post-install verification
 
 Ask your agent to run a low-risk dry test:
@@ -134,6 +138,7 @@ fuxi-agent-loop-skill/
 ├── ACKNOWLEDGEMENTS.md   # Attribution notes
 ├── SECURITY.md           # Security policy
 ├── TEST_PLAN.md          # Test plan
+├── PROMPTS.md            # Prompt recipes
 ├── LICENSE               # MIT License
 └── .gitignore
 ```
