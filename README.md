@@ -1,5 +1,7 @@
 # Fuxi Agent Loop Skill
 
+[简体中文](README.zh-CN.md) | English
+
 **Turn vague work into a verifiable agent loop.**
 
 Fuxi is a compact operating skill for AI agents that need to manage real work across files, tools, repositories, creative pipelines, research tasks, and multi-agent handoffs without drifting into guesswork.
