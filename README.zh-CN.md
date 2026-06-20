@@ -1,5 +1,7 @@
 # Fuxi Agent Loop Skill / 伏羲
 
+[English](README.en.md) | 简体中文
+
 **把模糊任务变成可验证的 Agent 工作循环。**
 
 Fuxi 是一个轻量级 agent skill, 用来帮助 AI Agent 处理文件、工具、代码仓库、创作流程、研究任务和多 agent 交接时的真实工作。
@@ -18,7 +20,7 @@ Fuxi 是一个轻量级 agent skill, 用来帮助 AI Agent 处理文件、工具
 
 Fuxi 把这些问题压成一个可复用的 loop contract。
 
-## Fuxi 能给 agent 什么
+## 功能解读
 
 | 能力 | 实际变化 |
 |---|---|
@@ -47,11 +49,14 @@ Fuxi 把这些问题压成一个可复用的 loop contract。
 
 不适合一次性问答、闲聊、很小的单点修改, 或不涉及状态、交接、验证、重复执行的任务。
 
-## 安装
+## 下载与安装
 
-把本仓库里的 `SKILL.md` 放到你的 agent skills 目录。
+### Codex / Claude Code / 通用 agent
 
-Codex 风格目录示例:
+1. 下载本仓库。
+2. 把 `SKILL.md` 放进你的 agent skills 目录, 并命名为 `fuxi`。
+
+目录示例:
 
 ```text
 skills/
@@ -59,9 +64,29 @@ skills/
     SKILL.md
 ```
 
-然后让 agent 在处理反复性、多步骤、多 agent、工作流、自动化、清理或项目巡检任务时使用 `fuxi`。
+如果你的 agent 支持共享技能目录, 也可以放在共享位置, 让多个 agent 读取同一个 `fuxi`。
 
-## 示例提示词
+### Windows 手动安装示例
+
+```powershell
+git clone https://github.com/jomashi/fuxi-agent-loop-skill.git
+mkdir "$env:USERPROFILE\.codex\skills\fuxi" -Force
+copy .\fuxi-agent-loop-skill\SKILL.md "$env:USERPROFILE\.codex\skills\fuxi\SKILL.md"
+```
+
+### macOS / Linux 手动安装示例
+
+```bash
+git clone https://github.com/jomashi/fuxi-agent-loop-skill.git
+mkdir -p ~/.codex/skills/fuxi
+cp fuxi-agent-loop-skill/SKILL.md ~/.codex/skills/fuxi/SKILL.md
+```
+
+如果你的 agent 使用的不是 Codex 目录, 把 `~/.codex/skills/fuxi` 换成对应平台的 skills 目录即可。
+
+## 使用方式
+
+安装后, 直接让 agent 使用 `fuxi`:
 
 ```text
 Use fuxi to turn this messy project cleanup into a repeatable workflow.
@@ -78,6 +103,29 @@ Use fuxi to make this vague creative workflow safe to run every day.
 ```text
 Use fuxi to inspect this repository, define the next handoff, and stop before risky changes.
 ```
+
+中文也可以:
+
+```text
+用 fuxi 把这个混乱的工作流整理成可反复执行、可验证、可暂停的流程。
+```
+
+## 安装后验证
+
+让 agent 执行一个低风险测试:
+
+```text
+Use fuxi to plan one safe loop turn for organizing a messy notes folder. Do not modify files.
+```
+
+理想输出应该包含:
+
+- 目标;
+- 需要检查的来源;
+- 下一步行动;
+- 验证方式;
+- 停止条件;
+- 不会直接删除或自动化执行。
 
 ## Loop Contract
 
@@ -101,6 +149,21 @@ Use fuxi to inspect this repository, define the next handoff, and stop before ri
 - 生成和验证分开。
 - 保存决策, 不保存噪音。
 - 遇到风险、歧义或不可逆动作时停止。
+
+## 文件结构
+
+```text
+fuxi-agent-loop-skill/
+├── SKILL.md              # Agent 读取的技能主体
+├── README.md             # 中文首页
+├── README.en.md          # English README
+├── README.zh-CN.md       # 中文说明副本
+├── ACKNOWLEDGEMENTS.md   # 来源与致谢说明
+├── SECURITY.md           # 安全说明
+├── TEST_PLAN.md          # 测试计划
+├── LICENSE               # MIT License
+└── .gitignore
+```
 
 ## 致谢
 
